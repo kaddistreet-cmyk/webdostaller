@@ -1,0 +1,127 @@
+:root {
+  --color-principal: #1f4e5f;
+  --color-secundario: #2d758b;
+  --color-acento: #e49b45;
+  --color-fondo: #f4f8f9;
+  --color-blanco: #ffffff;
+  --color-oscuro: #18323b;
+  --color-suave: #5c7077;
+  --color-borde: #d5e1e5;
+  --color-error: #b42318;
+  --sombra: 0 8px 22px rgba(24, 50, 59, 0.11);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--color-oscuro);
+  background-color: var(--color-fondo);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.contenedor {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.titulo-seccion {
+  margin-bottom: 10px;
+  color: var(--color-principal);
+  font-size: clamp(28px, 4vw, 38px);
+}
+
+.etiqueta {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--color-secundario);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.formulario {
+  display: grid;
+  gap: 18px;
+  max-width: 580px;
+  padding: 28px;
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+}
+
+.campo {
+  display: grid;
+  gap: 7px;
+}
+
+.campo label {
+  font-weight: bold;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 11px 12px;
+  color: var(--color-oscuro);
+  background-color: var(--color-blanco);
+  border: 1px solid #b9cbd1;
+  border-radius: 7px;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: 2px solid rgba(45, 117, 139, 0.22);
+  border-color: var(--color-secundario);
+}
+
+.formulario button,
+.boton {
+  padding: 11px 16px;
+  color: var(--color-blanco);
+  background-color: var(--color-principal);
+  border: 0;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.error {
+  margin: 0;
+  color: var(--color-error);
+  font-size: 14px;
+}
+
+@media (max-width: 650px) {
+  .contenedor {
+    padding: 34px 0;
+  }
+
+  .formulario {
+    padding: 22px;
+  }
+}

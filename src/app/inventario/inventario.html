@@ -1,0 +1,34 @@
+<section class="contenedor inventario">
+  <div class="encabezado-inventario">
+    <div>
+      <span class="etiqueta">Catálogo en línea</span>
+      <h1 class="titulo-seccion">Inventario</h1>
+
+      @if (vistaCompleta) {
+        <p>Vista completa: nombre, imagen, precio y stock.</p>
+      } @else {
+        <p>Vista previa: inicia sesión para consultar precio y stock.</p>
+      }
+    </div>
+
+    @if (!vistaCompleta) {
+      <a class="boton" routerLink="/login">Iniciar Sesión</a>
+    }
+  </div>
+
+  <div class="lista-productos">
+    @for (producto of productos(); track producto.id) {
+      <article>
+        <img [src]="producto.image" [alt]="producto.title" />
+        <h2>{{ producto.title }}</h2>
+
+        @if (vistaCompleta) {
+          <div class="datos-producto">
+            <p><strong>Precio:</strong> ${{ producto.price }}</p>
+            <p><strong>Stock:</strong> {{ producto.rating.count }} unidades</p>
+          </div>
+        }
+      </article>
+    }
+  </div>
+</section>

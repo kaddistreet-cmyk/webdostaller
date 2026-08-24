@@ -1,0 +1,39 @@
+<section class="solicitud contenedor">
+  <div class="informacion">
+    <span class="etiqueta">¿No encuentras un artículo?</span>
+    <h1 class="titulo-seccion">Solicitud de Producto</h1>
+    <p>
+      Completa el formulario para solicitar el producto que necesitas. Si sales con datos sin enviar, la aplicación te
+      mostrará una advertencia.
+    </p>
+  </div>
+
+  <form class="formulario" [formGroup]="formularioSolicitud" (ngSubmit)="enviarSolicitud()">
+    <div class="campo">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" type="text" formControlName="nombre" />
+    </div>
+
+    <div class="campo">
+      <label for="correo">Correo electrónico</label>
+      <input id="correo" type="email" formControlName="correo" placeholder="correo@ejemplo.com" />
+    </div>
+
+    <div class="campo">
+      <label for="producto">Producto solicitado</label>
+      <input id="producto" type="text" formControlName="producto" placeholder="Ejemplo: mochila" />
+    </div>
+
+    <div class="campo">
+      <label for="cantidad">Cantidad</label>
+      <input id="cantidad" type="number" min="1" formControlName="cantidad" />
+    </div>
+
+    <div class="campo">
+      <label for="detalle">Detalles adicionales</label>
+      <textarea id="detalle" rows="4" formControlName="detalle"></textarea>
+    </div>
+
+    <button type="submit">Enviar Solicitud</button>
+  </form>
+</section>

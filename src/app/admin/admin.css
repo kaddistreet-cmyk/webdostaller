@@ -1,0 +1,21 @@
+.nav-admin {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0 28px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.nav-admin a {
+  padding: 9px 14px;
+  color: var(--color-principal);
+  border: 1px solid var(--color-borde);
+  border-radius: 7px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-admin a.activo {
+  color: var(--color-blanco);
+  background-color: var(--color-principal);
+}

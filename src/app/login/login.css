@@ -1,0 +1,21 @@
+.login {
+  display: grid;
+  min-height: 590px;
+  place-items: center;
+}
+
+.formulario {
+  width: min(100%, 500px);
+}
+
+.ayuda {
+  margin-bottom: 0;
+  color: var(--color-suave);
+}
+
+.error-login {
+  padding: 10px 12px;
+  background-color: #fff0ee;
+  border: 1px solid #f2b8b1;
+  border-radius: 6px;
+}

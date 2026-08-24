@@ -1,0 +1,123 @@
+.inicio {
+  background: linear-gradient(120deg, #eaf4f6, #fff7ec);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.contenido-inicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 55px;
+  min-height: 430px;
+}
+
+.texto-inicio {
+  flex: 1;
+}
+
+.inicio h1 {
+  max-width: 680px;
+  margin-bottom: 17px;
+  color: var(--color-principal);
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.08;
+}
+
+.inicio p {
+  max-width: 600px;
+  color: var(--color-suave);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.acciones-inicio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.acciones-inicio a {
+  text-decoration: none;
+}
+
+.enlace-secundario {
+  padding: 10px 15px;
+  color: var(--color-principal);
+  border: 1px solid #91afb9;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.visual-inicio {
+  display: grid;
+  flex: 0 1 330px;
+  aspect-ratio: 1;
+  background: linear-gradient(145deg, var(--color-principal), var(--color-secundario));
+  border-radius: 50% 50% 18px 50%;
+  box-shadow: var(--sombra);
+  place-items: center;
+}
+
+.visual-inicio span {
+  font-size: clamp(90px, 14vw, 150px);
+}
+
+.lista-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.lista-servicios article {
+  padding: 24px;
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  box-shadow: var(--sombra);
+}
+
+.numero {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 14px;
+  color: var(--color-blanco);
+  background-color: var(--color-acento);
+  border-radius: 50%;
+  font-weight: bold;
+  place-items: center;
+}
+
+.lista-servicios h3 {
+  color: var(--color-principal);
+}
+
+.lista-servicios p {
+  margin-bottom: 0;
+  color: var(--color-suave);
+  line-height: 1.6;
+}
+
+@media (max-width: 750px) {
+  .contenido-inicio {
+    flex-direction: column;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .acciones-inicio {
+    justify-content: center;
+  }
+
+  .visual-inicio {
+    width: min(280px, 90%);
+    flex-basis: auto;
+  }
+
+  .lista-servicios {
+    grid-template-columns: 1fr;
+  }
+}

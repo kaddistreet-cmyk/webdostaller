@@ -1,0 +1,41 @@
+.cuenta article {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 650px;
+  margin-top: 25px;
+  padding: 30px;
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+}
+
+.avatar {
+  display: grid;
+  flex: 0 0 82px;
+  width: 82px;
+  height: 82px;
+  color: var(--color-blanco);
+  background-color: var(--color-secundario);
+  border-radius: 50%;
+  font-size: 38px;
+  font-weight: bold;
+  place-items: center;
+}
+
+.cuenta h2 {
+  color: var(--color-principal);
+}
+
+.cuenta p {
+  margin-bottom: 7px;
+  color: var(--color-suave);
+}
+
+@media (max-width: 520px) {
+  .cuenta article {
+    align-items: start;
+    flex-direction: column;
+  }
+}

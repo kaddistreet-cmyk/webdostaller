@@ -1,0 +1,25 @@
+<section class="login contenedor">
+  <form class="formulario" [formGroup]="FormulurioLogin" (ngSubmit)="ingresar()">
+    <div>
+      <span class="etiqueta">Acceso de usuarios</span>
+      <h1 class="titulo-seccion">Iniciar Sesión</h1>
+      <p class="ayuda">Credenciales de prueba: admin / 1234</p>
+    </div>
+
+    <div class="campo">
+      <label for="usuario">Usuario</label>
+      <input id="usuario" type="text" formControlName="usuario" placeholder="Ingresa tu usuario" />
+    </div>
+
+    <div class="campo">
+      <label for="contrasena">Contraseña</label>
+      <input id="contrasena" type="password" formControlName="contrasena" placeholder="Ingresa tu contraseña" />
+    </div>
+
+    @if (errorLogin()) {
+      <p class="error error-login">Usuario o contraseña incorrectos.</p>
+    }
+
+    <button type="submit">Iniciar Sesión</button>
+  </form>
+</section>

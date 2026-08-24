@@ -1,0 +1,30 @@
+.nosotros {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: start;
+  gap: 35px;
+}
+
+.nosotros p,
+.nosotros li {
+  color: var(--color-suave);
+  line-height: 1.7;
+}
+
+.nosotros aside {
+  padding: 28px;
+  background-color: var(--color-blanco);
+  border-left: 5px solid var(--color-acento);
+  border-radius: 10px;
+  box-shadow: var(--sombra);
+}
+
+.nosotros h2 {
+  color: var(--color-principal);
+}
+
+@media (max-width: 700px) {
+  .nosotros {
+    grid-template-columns: 1fr;
+  }
+}

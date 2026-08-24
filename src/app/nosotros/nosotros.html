@@ -1,0 +1,23 @@
+<section class="contenedor nosotros">
+  <div>
+    <span class="etiqueta">Quiénes somos</span>
+    <h1 class="titulo-seccion">Nosotros</h1>
+    <p>
+      Somos una tienda dedicada a ofrecer productos útiles y accesibles. Nuestra aplicación permite
+      consultar el catálogo y solicitar nuevos artículos.
+    </p>
+    <p>
+      Trabajamos para mantener información clara y brindar una experiencia de compra sencilla para
+      nuestros clientes.
+    </p>
+  </div>
+
+  <aside>
+    <h2>Nuestros valores</h2>
+    <ul>
+      @for (valor of valores; track valor) {
+        <li>{{ valor }}</li>
+      }
+    </ul>
+  </aside>
+</section>

@@ -1,0 +1,36 @@
+<section class="inicio">
+  <div class="contenedor contenido-inicio">
+    <div class="texto-inicio">
+      <span class="etiqueta">Productos para todos</span>
+      <h1>Encuentra lo que necesitas en nuestra tienda</h1>
+      <p>
+        Explora el catálogo, solicita nuevos productos y consulta el inventario disponible de una
+        forma sencilla.
+      </p>
+
+      <div class="acciones-inicio">
+        <a class="boton" routerLink="/inventario">Ver inventario</a>
+        <a class="enlace-secundario" routerLink="/solicitud-producto">Solicitar producto</a>
+      </div>
+    </div>
+
+    <div class="visual-inicio" aria-hidden="true">
+      <span>🛍️</span>
+    </div>
+  </div>
+</section>
+
+<section class="contenedor servicios">
+  <span class="etiqueta">Nuestros servicios</span>
+  <h2 class="titulo-seccion">Lo que ofrecemos</h2>
+
+  <div class="lista-servicios">
+    @for (servicio of servicios; track servicio.id) {
+      <article>
+        <span class="numero">0{{ servicio.id }}</span>
+        <h3>{{ servicio.nombre }}</h3>
+        <p>{{ servicio.descripcion }}</p>
+      </article>
+    }
+  </div>
+</section>
